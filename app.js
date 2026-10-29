@@ -126,9 +126,11 @@ function isLoggedIn(req,res,next){
     
 }
 
-app.listen(3000,()=>{
-    console.log('server is live');
-})
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log("Server is live on port", PORT);
+});
 
 
 
